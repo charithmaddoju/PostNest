@@ -5,6 +5,9 @@ import '../styles/navbar.css'
 export const Navbar = () => {
 
     const [user] = useAuthState(auth);
+    const signOut = () => {
+        auth.signOut();
+    }
 
     return (
         <nav className="Navbar">
@@ -12,13 +15,17 @@ export const Navbar = () => {
             <ul>
                 <li>
                     <Link to='/'>Home </Link>
-                    <Link to='/login'>Login</Link>
+                    {!user && <Link to='/login'>Login</Link>}
+                    {user && <Link to='/create'>CreatePost</Link>}
                 </li>
             </ul>
-            <div className="User">
-                <p className="User-name">{user?.displayName}</p>
-                <img className="User-img" src={user?.photoURL || "" } alt="user" />
-            </div>
+            {user &&
+                <div className="User">
+                    <p className="User-name">{user?.displayName}</p>
+                    <img className="User-img" src={user?.photoURL || "" } alt="user" />
+                    <button onClick={signOut}>Sign out</button>
+                </div>
+            }
         </nav>
     )
 }

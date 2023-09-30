@@ -15,12 +15,16 @@
     display: flex;
     align-items: center;
 }
+.User-name{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
 .User-img{
-    margin: 0px 5px;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    margin-right: 0.5rem;
+    margin: 0rem 0.5rem;
 }
 ul{
     display: flex;

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const Login = () => {
 
     const navigate = useNavigate();
-
+    
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)
         .then((result) => {
@@ -19,6 +19,7 @@ export const Login = () => {
         <div>
             <h3>Sign in with google to continue!</h3>
             <button onClick={signInWithGoogle}>Sign in</button>
+            
         </div>
     )
 }
