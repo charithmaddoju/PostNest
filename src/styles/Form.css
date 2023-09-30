@@ -1,0 +1,11 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10% 10%;
+}
+.Form input, textarea{
+    margin: 1% 0;
+    padding: 1%;
+    border: 1px solid #5a5a5a;
+    border-radius: 5px;
+}

@@ -1,0 +1,28 @@
+.Home h1{
+    margin: 5% 0;
+}
+
+.Home-list{
+    display: flex;
+}
+
+.Post{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2% 5%;
+    padding: 3%;
+    border-radius: 1rem;
+    border: 2px solid #5a5a5a;
+    background-color: #eeeeee;
+}
+
+.Post b{
+    font-style: italic;
+    margin-bottom: 2%;
+}
+
+.Post div button{
+    border : none;
+    background : none;
+}
